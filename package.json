@@ -3,13 +3,14 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"description": "A NodeJs Docker Container using Babel and ES6",
-	"repository":"https://github.com/Moikapy/MoiNode.git",
+	"repository": "https://github.com/Moikapy/MoiNode.git",
 	"license": "MIT",
 	"scripts": {
-		"dev": "babel-watch index.js",
+		"dev": "nodemon -L --exec babel-node index.js",
 		"compile": "babel index.js -d build",
 		"start": "yarn compile && node build/index.js",
-		"start:docker": "docker run -p 8081:8081 moinode",
+		"start:docker": "npm run build:docker && npm run run:docker",
+		"run:docker": "docker run -p 8081:8081 moinode",
 		"build:docker": "docker build -t moinode .",
 		"dev:docker": "docker-compose up"
 	},
@@ -22,8 +23,9 @@
 	"devDependencies": {
 		"@babel/cli": "^7.4.4",
 		"@babel/core": "^7.0.0",
+		"@babel/node": "^7.4.5",
 		"@babel/preset-env": "^7.4.5",
-		"babel-watch": "^7.0.0",
+		"nodemon": "^1.19.0",
 		"yarn": "^1.16.0"
 	}
 }
