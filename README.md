@@ -1,5 +1,5 @@
-# Docker Node
-> IDD's Docker Repo for creating Nodejs Web Apps
+# Moi Node
+> Docker Repo for creating Nodejs Web Apps
 
 ## Prereqs
 
