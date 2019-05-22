@@ -2,13 +2,12 @@
 FROM node:lts
 ENV YARN_VERSION 1.16.0
 #Creates Working App
-WORKDIR /app
+WORKDIR /usr/src/app
 #copy's package.json file and installs deps
-COPY package.json /app
+COPY package.json ./
 RUN npm i
 #bundles source
-COPY . /app
+COPY . .
 
 #starts Project
-EXPOSE 8081
-CMD ["yarn", "dev"]
+CMD ["yarn", "start"]
