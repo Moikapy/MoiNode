@@ -1,0 +1,22 @@
+{
+	"name": "moinode",
+	"version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+		"dev": "babel-watch index.js",
+		"run:docker":"docker run -p 8081:8081 moinode",
+		"build:docker":"docker build -t moinode ."
+  },
+	"license": "MIT",
+	"dependencies": {
+		"dotenv": "^8.0.0",
+		"express": "^4.17.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.4.4",
+		"@babel/core": "^7.0.0",
+		"@babel/preset-env": "^7.4.5",
+		"babel-watch": "^7.0.0",
+		"yarn": "^1.16.0"
+	}
+}
