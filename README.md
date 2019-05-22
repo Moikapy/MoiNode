@@ -1,8 +1,57 @@
 # Moi Node
 > Docker Repo for creating Nodejs Web Apps
 
-## Prereqs
+## Introduction
+Moi Node is a NodeJs Docker Container created to be used for local development as well as for production use.
 
-- Docker
-  - Must be run in Linux mode
-- NodeJs
+## How To Get Started
+
+- Download Dependencies
+
+```
+npm i
+
+# or
+
+yarn
+```
+
+- Starting the Container for Development
+
+```
+npm run dev:docker
+
+# or 
+
+yarn dev:docker
+```
+
+- Starting Container for Production
+
+```
+npm run build:docker && npm start:docker
+
+# or
+
+yarn build:docker && yarn start:docker
+```
+
+- Start Dev Server
+
+```
+npm run dev
+
+# or
+
+yarn dev
+```
+
+- Start Prod Server
+
+```
+npm start
+
+# or
+
+yarn start
+```

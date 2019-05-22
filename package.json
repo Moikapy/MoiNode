@@ -2,14 +2,17 @@
 	"name": "moinode",
 	"version": "1.0.0",
 	"main": "index.js",
+	"description": "A NodeJs Docker Container using Babel and ES6",
+	"repository":"https://github.com/Moikapy/MoiNode.git",
+	"license": "MIT",
 	"scripts": {
 		"dev": "babel-watch index.js",
 		"compile": "babel index.js -d build",
 		"start": "yarn compile && node build/index.js",
-		"run:docker": "docker run -p 8081:8081 moinode",
-		"build:docker": "docker build -t moinode ."
+		"start:docker": "docker run -p 8081:8081 moinode",
+		"build:docker": "docker build -t moinode .",
+		"dev:docker": "docker-compose up"
 	},
-	"license": "MIT",
 	"dependencies": {
 		"cors": "^2.8.5",
 		"dotenv": "^8.0.0",
