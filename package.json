@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
 		"dev": "babel-watch index.js",
+		"compile":"babel index.js -d build",
+		"start": "yarn compile && node build/index.js",
 		"run:docker":"docker run -p 8081:8081 moinode",
 		"build:docker":"docker build -t moinode ."
   },
