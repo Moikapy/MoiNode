@@ -1,14 +1,16 @@
+# Gets Latest Node
 FROM node:lts
 
-#Creates Working App
+# Creates Working App
 WORKDIR /usr/src/app
 
-#copy's package.json file and installs deps
+# Copy's package.json file
 COPY package.json ./
-RUN npm i -g nodemon yarn @babel/cli @babel/core @babel/preset-env @babel/node --quiet
+
+# Installs Dependecies for Project
 RUN npm install --quiet
 
-#bundles source
+# Bundles source
 COPY . .
 
 #starts Project

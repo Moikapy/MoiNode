@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 8081;
 app.use(cors());
 app.get("/", (req, res) => {
-	res.send("Hello from Moi Node!!!");
+	res.send("Hello from Moi Node!!");
 });
 
 // Sets what Port the Server is listening on
