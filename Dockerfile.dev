@@ -1,14 +1,15 @@
+# Gets Latest Node
 FROM node:lts
 
-#Creates Working App
+# Creates Working App
 WORKDIR /usr/src/app
 
-#copy's package.json file and installs deps
+# Copy's package.json file
 COPY package.json ./
 
 RUN npm install --quiet
 
-#bundles source
+# Bundles source
 COPY . .
 
 #starts Project
