@@ -29,11 +29,11 @@ yarn dev:docker
 - Starting Container for Production
 
 ```
-npm run build:docker && npm start:docker
+npm run start:docker
 
 # or
 
-yarn build:docker && yarn start:docker
+yarn start:docker
 ```
 
 - Start Dev Server
