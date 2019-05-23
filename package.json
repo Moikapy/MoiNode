@@ -1,6 +1,6 @@
 {
 	"name": "moinode",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"main": "index.js",
 	"description": "A NodeJs Docker Container using Babel and ES6",
 	"repository": "https://github.com/Moikapy/MoiNode.git",
