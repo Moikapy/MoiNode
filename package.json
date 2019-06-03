@@ -26,6 +26,7 @@
 		"@babel/node": "^7.4.5",
 		"@babel/preset-env": "^7.4.5",
 		"nodemon": "^1.19.0",
-		"yarn": "^1.16.0"
+		"yarn": "^1.16.0",
+		"moiboi-cli":"latest"
 	}
 }
