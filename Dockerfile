@@ -2,14 +2,13 @@ FROM node:lts
 
 #Creates Working App
 WORKDIR /usr/src/app
-RUN npm i -g npm yarn
 #copy's package.json file and installs deps
 COPY package.json ./
-RUN npm install --quiet
-
+RUN npm i -g npm yarn nodemon --quiet
+RUN yarn
 #bundles source
 COPY . .
-
+# Port App is Running on
+EXPOSE 8080
 #starts Project
-
-CMD ["yarn", "start"]
+CMD [ "npm","dev" ]
