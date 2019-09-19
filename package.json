@@ -7,10 +7,10 @@
 		"dev": "nodemon -L --exec babel-node src/index.js",
 		"build": "babel src -d dist",
 		"start": "yarn build && node dist/index.js",
-		"build:docker":"docker-compose build",
-		"start:docker":"docker-compose up -d",
-		"end:docker":"docker-compose down",
-		"clean:docker":"docker system prune -f --volumes"
+		"build:docker": "docker-compose build",
+		"start:docker": "docker-compose up -d",
+		"end:docker": "docker-compose down",
+		"clean:docker": "docker system prune -f --volumes"
 	},
 	"license": "MIT",
 	"dependencies": {
