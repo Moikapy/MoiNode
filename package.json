@@ -1,19 +1,18 @@
 {
-	"name": "moinode",
-	"version": "0.1.0",
+	"name": "dockernode",
+	"version": "0.1.2",
 	"main": "src/index.js",
 	"description": "A NodeJs Docker Container using Babel and ES6",
-	"repository": "https://github.com/Moikapy/MoiNode.git",
-	"license": "MIT",
 	"scripts": {
-		"dev": "nodemon -L --exec babel-node index.js",
+		"dev": "nodemon -L --exec babel-node src/index.js",
 		"build": "babel src -d dist",
 		"start": "yarn build && node dist/index.js",
-		"start:docker": "npm run build:docker && npm run run:docker",
-		"run:docker": "docker run -p 8081:8081 moinode",
-		"build:docker": "docker build -t moinode .",
-		"dev:docker": "docker-compose up"
+		"build:docker":"docker-compose build",
+		"start:docker":"docker-compose up -d",
+		"end:docker":"docker-compose down",
+		"clean:docker":"docker system prune -f --volumes"
 	},
+	"license": "MIT",
 	"dependencies": {
 		"@babel/polyfill": "^7.4.4",
 		"cors": "^2.8.5",

@@ -1,16 +1,23 @@
-import "@babel/polyfill";
-import dotenv from "dotenv";
-import express from "express";
-import cors from "cors"
+import '@babel/polyfill';
+import dotenv from 'dotenv';
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
 dotenv.config();
-const app = express();
-const port = process.env.PORT || 8081;
-app.use(cors());
-app.get("/", (req, res) => {
-	res.send("Hello from Moi Node!!");
-});
 
-// Sets what Port the Server is listening on
+const app = express();
+const port = process.env.PORT || 3030;
+
+app.use(cors());
+
+// app.get('/', (req, res) => {
+//   console.log('updated')
+//   res.send('This works')
+// })
+
+app.use(express.static(path.join(__dirname, '/../public')));
+
+
 app.listen(port, () => {
-	console.log(`Listening to http://localhost:${port}`);
+	console.log(`Server running on: http://localhost:${port}`);
 });

@@ -1,13 +1,15 @@
-version: '3'
-
+version: '2'
 services:
-  dev:
-    build: 
-      context: .
-      dockerfile: Dockerfile.dev
-    command: npm run dev
+  web:
+    build: .
+    command: yarn start
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - .:/usr/app/
+      - /usr/app/node_modules
+      - /usr/app/public
     ports:
-      - 8081:8081
+      - '3030:8080'
+  nginx:
+    build: ./nginx-docker
+    ports:
+      - '80:80'
