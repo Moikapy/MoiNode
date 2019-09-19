@@ -10,7 +10,7 @@
 		"build:docker": "docker-compose build",
 		"start:docker": "docker-compose up -d",
 		"end:docker": "docker-compose down",
-		"clean:docker": "docker system prune -f --volumes"
+		"clean:docker": "docker system prune -f"
 	},
 	"license": "MIT",
 	"dependencies": {
