@@ -1,6 +1,6 @@
 # Moi Node
-> Docker Repo for creating Nodejs Web Apps
-> [Download](https://github.com/Moikapy/MoiNode/releases)
+> Docker Repo for NodeJS/Express projects hosted on Nginx
+
 ## Introduction
 Moi Node is a NodeJs Docker Container created to be used for local development as well as for production use.
 
