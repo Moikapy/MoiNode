@@ -6,6 +6,22 @@ Moi Node is a NodeJs Docker Container created to be used for local development a
 
 ## How To Get Started
 
+- Download moiboi-cli
+```
+npm i -g moiboi-cli
+
+# or
+
+yarn -g moiboi-cli
+```
+
+- Clone project into new folder
+```
+
+moiboi clone Moikapy/MoiNode <Your Project Directory>
+
+```
+
 - Download Dependencies
 
 ```
