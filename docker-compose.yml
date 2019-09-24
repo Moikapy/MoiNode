@@ -1,5 +1,14 @@
 version: '3'
 services:
+  dev:
+    build: .
+    command: yarn dev
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    working_dir: /usr/app
+    ports:
+      - '3030:8080'
   web:
     build: .
     command: yarn start
