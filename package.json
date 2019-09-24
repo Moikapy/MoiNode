@@ -1,8 +1,8 @@
 {
-	"name": "dockernode",
-	"version": "0.1.2",
+	"name": "MoiNode",
+	"version": "0.1.3",
 	"main": "src/index.js",
-	"description": "A NodeJs Docker Container using Babel and ES6",
+	"description": "A NodeJs Docker Container using Babel and ES6 and Reversed Proxied on NGINX",
 	"scripts": {
 		"dev": "nodemon -L --exec babel-node src/index.js",
 		"build": "babel src -d dist",
