@@ -2,13 +2,13 @@ version: '3'
 services:
   dev:
     build: .
-    command: yarn dev
+    command: bash -c "yarn && yarn dev"
     volumes:
       - .:/usr/app/
       - /usr/app/node_modules
     working_dir: /usr/app
     ports:
-      - '3030:8080'
+      - '3030:3030'
   web:
     build: .
     command: yarn start
