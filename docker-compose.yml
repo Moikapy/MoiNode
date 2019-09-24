@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   web:
     build: .
@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/usr/app/
       - /usr/app/node_modules
-      - /usr/app/public
+    working_dir: /usr/app
     ports:
       - '3030:8080'
   nginx:
