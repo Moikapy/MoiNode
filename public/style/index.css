@@ -1,0 +1,10 @@
+@import url('./fonts.css');
+html,
+body {
+	/* Gotham ScreenSmart Light */
+	font-family: 'Gotham SSm A', 'Gotham SSm B', monospace;
+	font-style: normal;
+	font-weight: 300;
+	height: 100%;
+	background-color: #eee;
+}
